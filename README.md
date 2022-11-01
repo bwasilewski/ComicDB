@@ -2,8 +2,11 @@
 
 ComicDB is a web application that can track comic book collections.
 
-- Ruby on Rails
-- PostgreSQL
+## Requirements
+
+- Ruby v2.7.5
+- Rails v6.1.7
+- PostgreSQL 14.5
 
 ## Tasks:
 
