@@ -2,7 +2,7 @@
 
 ComicDB is a web application that can track comic book collections.
 
-## Requirements
+## Requirements:
 
 - Ruby v2.7.5
 - Rails v6.1.7
@@ -13,6 +13,15 @@ ComicDB is a web application that can track comic book collections.
 - [ ] 🤝 User Authentication
 - [ ] 🔌 Connect to ComicVine API
 - [ ] 💾 CRUD Comic series and issues
+
+## Getting Started:
+
+```
+$ git clone https://github.com/bwasilewski/ComicDB.git
+$ cd comicdb
+$ bundle install
+$ rails server
+```
 
 ## Resources:
 
