@@ -3,7 +3,7 @@
 	 	<div class="container">
 			<% if Current.user %>
 				<p>Logged in as: <%= Current.user.email %></p>
-				<%= link_to edit_password_path %>
+				<%= link_to 'Change Password', edit_password_path %>
 				<%= button_to 'Logout', logout_path, method: :delete %>
 			<% else %>
 			 	<p>
