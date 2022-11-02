@@ -22,8 +22,14 @@
           <a class="navbar-item" href="/about">About</a>
           <a class="navbar-item" href="/sign_in">Sign In</a>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <% if notice %>
+        <p><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p><%= alert %></p>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
