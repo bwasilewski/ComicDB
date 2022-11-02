@@ -1,0 +1,25 @@
+<div class="section">
+	<div class="container">
+		<h1 class="title">Change Password</h1>
+
+	<div class="columns">
+	 	<div class="column is-one-quarter">
+			<%= form_with model: Current.user, url: edit_password_path do |f| %>
+				<div class="field">
+					<%= f.label 'password', class: 'label' %>
+					<%= f.password_field :password, required: true, class: 'input' %>
+				</div>
+
+				<div class="field">
+					<%= f.label 'password_confirmation', class: 'label' %>
+					<%= f.password_field :password_confirmation, required: true, class: 'input' %>
+				</div>
+
+				<div class="field">
+					<%= f.submit 'Change Password', class: 'button is-primary' %>
+					<a href="/" class="button is-light">Cancel</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
