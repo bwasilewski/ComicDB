@@ -16,12 +16,22 @@ ComicDB is a web application that can track comic book collections.
 
 ## Getting Started
 
-``` javascript
+``` bash
 git clone https://github.com/bwasilewski/ComicDB.git
 cd comicdb
 bundle install
-rails server
 ```
+
+Create a file named `local_dev.yml` and save it at the root of your project. The file's contents should look like the following:
+
+``` yaml
+EMAIL_USERNAME: 'email@address.com'
+EMAIL_PASSWORD: 'password'
+```
+
+Lastly, run:
+
+`rails server`
 
 ## Resources
 
