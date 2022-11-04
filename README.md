@@ -2,17 +2,20 @@
 
 ComicDB is a web application that can track comic book collections.
 
+
 ## Requirements
 
 - Ruby v2.7.5
 - Rails v6.1.7
 - PostgreSQL 14.5
 
+
 ## Tasks
 
 - [ ] 🤝 User Authentication
 - [ ] 🔌 Connect to ComicVine API
 - [ ] 💾 CRUD Comic series and issues
+
 
 ## Getting Started
 
@@ -32,6 +35,7 @@ EMAIL_PASSWORD: 'password'
 Lastly, run:
 
 `rails server`
+
 
 ## Resources
 
