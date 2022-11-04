@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Comicdb</title>
+    <title>ComicDB</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -20,14 +20,27 @@
         </div>
         <div class="navbar-end">
           <a class="navbar-item" href="/about">About</a>
-          <a class="navbar-item" href="/sign_in">Sign In</a>
+          <% if Current.user && %>
+            <a class="navbar-item" href="/profile"><%= Current.user.email %></a>
+            <%= link_to 'Sign out', logout_path, method: :delete, class: 'navbar-item' %>
+          <% else %>
+            <a class="navbar-item" href="/sign_in">Sign In</a>
+          <% end %>
         </div>
       </nav>
       <% if notice %>
-        <p><%= notice %></p>
+      	<article class="message is-success">
+          <div class="message-body">
+            <p><%= notice %></p>
+          </div>
+        </article>
       <% end %>
       <% if alert %>
-        <p><%= alert %></p>
+      	<article class="message is-danger">
+          <div class="message-body">
+            <p><%= alert %></p>
+          </div>
+        </article>
       <% end %>
     </div>
     <%= yield %>
