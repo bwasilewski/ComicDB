@@ -34,7 +34,9 @@ EMAIL_PASSWORD: 'password'
 
 Lastly, run:
 
-`rails server`
+``` bash
+rails server
+```
 
 
 ## Resources
