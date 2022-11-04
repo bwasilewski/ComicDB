@@ -1,0 +1,14 @@
+<div class="container">
+	<h2 class="title is-2">Profile</h2>
+	<%= link_to 'Change Profile', edit_profile_path %> 
+	<table>
+		<tr>
+			<td>Email:</td>
+			<td><%= Current.user.email %></td>
+		</tr>
+		<tr>
+			<td>Display Name:</td>
+			<td><%= Current.user.display_name %></td>
+		</tr>
+	</table>
+</div>

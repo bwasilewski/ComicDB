@@ -22,4 +22,9 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+
+  # logged in users only
+  get 'profile' => 'profile#view'
+  get 'profile/edit' => 'profile#edit', as: 'edit_profile'
+  patch 'profile/edit' => 'profile#update'
 end
