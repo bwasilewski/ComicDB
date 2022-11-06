@@ -5,15 +5,24 @@
 			<h1 class="title">Comic DB</h1>
 			<h2 class="subtitle">Keep track of your comic books!</h2>
 			</div>
-			<div class="block">
-				<% if !Current.user %>
+			<% if !Current.user %>
+				<div class="block">
 					<p>
 						<%= link_to 'Sign in', sign_in_path %>
 						or
 						<%= link_to 'Sign Up', sign_up_path %>
 					</p>
-				<% end %>
-			</div>
+				</div>
+			<% else %>
+				<div class="block">
+					<button class="button is-primary">
+						<span class="icon">
+							<i class="fas fa-arrow-right"></i>
+						</span>
+						<span>New Series</span>
+					</button>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>
