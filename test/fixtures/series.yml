@@ -2,14 +2,30 @@
 
 one:
   aliases: MyString
+  api_detail_url: MyString
   character_credits: MyString
-  count_of_episodes: 9.99
+  count_of_episodes: 1
+  date_last_updated: 2022-11-03 23:10:00
   deck: MyText
   description: MyText
+  api_id: MyString
+  image: MyString
+  name: MyString
+  publisher: MyString
+  site_detail_url: MyString
+  start_year: MyString
 
 two:
   aliases: MyString
+  api_detail_url: MyString
   character_credits: MyString
-  count_of_episodes: 9.99
+  count_of_episodes: 1
+  date_last_updated: 2022-11-03 23:10:00
   deck: MyText
   description: MyText
+  api_id: MyString
+  image: MyString
+  name: MyString
+  publisher: MyString
+  site_detail_url: MyString
+  start_year: MyString

@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_04_014335) do
+ActiveRecord::Schema.define(version: 2022_11_04_041000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "series", force: :cascade do |t|
-    t.string "aliases", default: [], array: true
-    t.string "character_credits", default: [], array: true
-    t.decimal "count_of_episodes"
+    t.string "aliases"
+    t.string "api_detail_url"
+    t.string "character_credits"
+    t.integer "count_of_episodes"
+    t.datetime "date_last_updated"
     t.text "deck"
     t.text "description"
+    t.string "api_id"
+    t.string "image"
+    t.string "name"
+    t.string "publisher"
+    t.string "site_detail_url"
+    t.string "start_year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
