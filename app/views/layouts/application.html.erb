@@ -20,8 +20,14 @@
         </div>
         <div class="navbar-end">
           <a class="navbar-item" href="/about">About</a>
-          <% if Current.user && %>
-            <a class="navbar-item" href="/profile"><%= Current.user.email %></a>
+          <% if Current.user %>
+            <a class="navbar-item" href="/profile">
+            	<% if Current.user.display_name != "" %>
+                <%= Current.user.display_name %>
+              <% else %>
+                <%= Current.user.email %>
+              <% end %>
+            </a>
             <%= link_to 'Sign out', logout_path, method: :delete, class: 'navbar-item' %>
           <% else %>
             <a class="navbar-item" href="/sign_in">Sign In</a>
