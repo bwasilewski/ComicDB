@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  api_detail_url: MyString
+  cover_date: 2022-11-06
+  deck: MyText
+  description: MyText
+  image: MyString
+  issue_number: MyString
+  name: MyString
+  store_date: 2022-11-06
+  volume: 1
+
+two:
+  api_detail_url: MyString
+  cover_date: 2022-11-06
+  deck: MyText
+  description: MyText
+  image: MyString
+  issue_number: MyString
+  name: MyString
+  store_date: 2022-11-06
+  volume: 1
