@@ -1,0 +1,19 @@
+<div class="container">
+	<table class="table is-fullwidth">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Issue Number</td>
+				<td>Cover Date</td>
+				<td>Actions</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @result['volume']['name'] %></td>
+				<td><%= @result['issue_number'] %></td>
+				<td><%= @result['cover_date'] %></td>
+				<td><button class="button is-warning is-small">Add to collection</button></td>
+		</tbody>
+	</table>
+</div>
