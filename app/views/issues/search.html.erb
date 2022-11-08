@@ -2,9 +2,14 @@
 	<h2 class="title is-2">Search Issues</h2>
 
 	<div class="block">
-		<%= form_tag "/issues/search" do %>
-			<%= text_field_tag "query" %>
-			<%= submit_tag "Search" %>
+		<%= form_with url: "/issues/search", method: :post do |form| %>
+		 	<div class="field">
+				<%= form.label :query, "Enter your search:" %>
+				<%= form.text_field :query, class: 'input' %>
+			</div>
+			<div class="field">
+				<%= form.submit "Search", class: "button is-primary" %>
+			</div>
 		<% end %>
 	</div>
 </div> 
