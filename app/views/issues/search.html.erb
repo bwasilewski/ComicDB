@@ -1,14 +1,10 @@
 <div class="container">
 	<h2 class="title is-2">Search Issues</h2>
 
- <div class="level">
-		<div class="level-left">
-			<div class="level-item">
-				<input id="series" type="text" class="input" placeholder="Search Query" />
-			</div>
-			<div class="level-item">
-				<button class="button is-primary">Search</button>
-			</div>
-		</div>
-	</div> 
-</div>
+	<div class="block">
+		<%= form_tag "/issues/search" do %>
+			<%= text_field_tag "query" %>
+			<%= submit_tag "Search" %>
+		<% end %>
+	</div>
+</div> 

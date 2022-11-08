@@ -1,0 +1,40 @@
+<div class="container">
+	<h2 class="title is-2">Search Results</h2>
+
+	<ul>
+		<li>Page Results: <%= @pageResults %></li>
+		<li>Total Results: <%= @totalResults %></li>
+		<li>Limit: <%= @limit %></li>
+	</ul>
+
+	<table class="table is-fullwidth">
+		<thead>
+			<tr>
+				<th>Select</th>
+				<th>Cover Art</th>
+				<th>Name</th>
+				<th>Issue Number</th>
+				<th>Cover Date</th>
+			</tr>
+		</thead>
+		<tbody>
+		 	<% @results.each do |result| %>
+				<% 
+				 	detail_url = result['api_detail_url']
+					issue_path = detail_url.slice(0, detail_url.length - 1) 
+					issue_id = issue_path.slice(issue_path.rindex('/') + 1, issue_path.length)
+				%>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td><img src="<%= result['image']['tiny_url'] %>" /></td>
+					<td><%= result['volume']['name'] %></td>
+					<td><a href="/issues/<%= issue_id %>"><%= result['issue_number'] %></a></td>
+					<td><%= result['cover_date'] %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<code>
+		<%= @results %>
+	</code>
+</div>
