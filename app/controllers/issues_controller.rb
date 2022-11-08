@@ -10,11 +10,17 @@ class IssuesController < ApplicationController
 		@results = responseObj['results']
 	end
 	def view
-		url = "https://comicvine.gamespot.com/api/issue/#{view_params['id']}?format=json&api_key=#{ENV['COMICVINE_KEY']}"
+		issueUrl = "https://comicvine.gamespot.com/api/issue/#{view_params['id']}?format=json&api_key=#{ENV['COMICVINE_KEY']}"
 		
-		response = RestClient.get(url)
-		responseObj = JSON.parse(response.body)
-		@result = responseObj['results']	
+		issueResponse = RestClient.get(issueUrl)
+		issueResponseObj = JSON.parse(issueResponse.body)
+		@result = issueResponseObj['results']	
+
+		volumeUrl = "#{@result['volume']['api_detail_url']}?format=json&api_key=#{ENV['COMICVINE_KEY']}"
+		
+		volumeResponse = RestClient.get(volumeUrl)
+		volumeResponseObj = JSON.parse(volumeResponse.body)
+		@volume = volumeResponseObj['results']
 	end
 	def edit; end
 	def search_params

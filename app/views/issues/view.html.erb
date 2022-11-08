@@ -5,6 +5,8 @@
 				<td>Name</td>
 				<td>Issue Number</td>
 				<td>Cover Date</td>
+				<td>Volume</td>
+				<td>Publisher</td>
 				<td>Actions</td>
 			</tr>
 		</thead>
@@ -13,6 +15,8 @@
 				<td><%= @result['volume']['name'] %></td>
 				<td><%= @result['issue_number'] %></td>
 				<td><%= @result['cover_date'] %></td>
+				<td><%= @volume['deck'] %></td>
+				<td><%= @volume['publisher']['name'] %></td>
 				<td><button class="button is-warning is-small">Add to collection</button></td>
 		</tbody>
 	</table>
