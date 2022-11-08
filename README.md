@@ -13,8 +13,11 @@ ComicDB is a web application that can track comic book collections.
 ## Tasks
 
 - [x] 🤝 User Authentication
-- [ ] 🔌 Connect to ComicVine API
-- [ ] 💾 CRUD Comic series and issues
+- [x] 🔌 Connect to ComicVine API
+- [x] 🔍 Search ComicVine API and display results
+- [x] 📕 Fetch and display a single issue
+- [ ] 📚 Fetch and display a series
+- [ ] 💾 CRUD collections
 
 
 ## Getting Started
