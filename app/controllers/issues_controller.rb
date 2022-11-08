@@ -7,6 +7,7 @@ class IssuesController < ApplicationController
 		url = "https://comicvine.gamespot.com/api/search/?format=json&api_key=#{ENV['COMICVINE_KEY']}&query=#{search_params['query']}&resources=issue"
 		response = RestClient.get(url)
 		responseObj = JSON.parse(response.body)
+		@results = responseObj['results']
 	end
 	def view
 		url = "https://comicvine.gamespot.com/api/issue/#{view_params['id']}?format=json&api_key=#{ENV['COMICVINE_KEY']}"
