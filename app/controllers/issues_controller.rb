@@ -1,4 +1,5 @@
 class IssuesController < ApplicationController
+	before_action :require_user_logged_in!
 	def new
 	end
 	def search; end
